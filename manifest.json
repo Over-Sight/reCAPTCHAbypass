@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "Bypass reCAPTCHA",
+    "version": "1.0.0",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "logo16.png",
+        "48": "logo48.png",
+        "128": "logo128.png"
+      }
+    },
+    "permissions": [
+      "activeTab",
+      "https://*/*",
+      "http://*/*"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["content.js"]
+      }
+    ]
+  }
